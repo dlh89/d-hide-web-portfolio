@@ -1,0 +1,24 @@
+.section-banner {
+    background-color: $color-primary;
+}
+
+.section-about {
+    overflow: hidden; // prevent children's margins from affecting this parent    
+}
+
+.section-technologies {
+    background-color: $color-secondary;
+    color: #FFF;
+    overflow: hidden; // prevent children's margins from affecting this parent
+}
+
+.section-projects {
+    background-color: $color-light-grey;    
+    color: #FFF;    
+    overflow: hidden;
+}
+
+.section-contact {
+    background-color: $color-primary;
+    overflow: hidden;
+}

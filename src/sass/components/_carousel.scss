@@ -1,0 +1,158 @@
+.carousel {
+    position: relative;
+    height: 60rem;
+    overflow: hidden;
+    margin: auto;
+    max-width: 128rem;
+
+    @include respond(tab-port) {
+        margin: 0 3.2rem;
+        max-width: none;
+    }
+
+    &__side-buttons {
+        border-radius: 50%;
+        color: #FFF;
+        font-size: 3rem;
+        height: 5.5rem;
+        padding: 15px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: all .2s;
+        width: 5.5rem;
+        z-index: 2;
+        
+        &:hover {
+            background-color: rgba(0,0,0,.25);
+            cursor: pointer;
+        }
+        
+        &--left {
+            left: 0;
+            margin-left: 1.5rem;
+        }
+        
+        &--right {
+            margin-right: 1.5rem;
+            right: 0;
+        }
+    }
+
+    &__arrow-right {
+        position: absolute;
+        // position in centre of circle
+        top: 50%;
+        left: 50%;
+        transform: translate(-43%, -53%);
+    }
+
+    &__arrow-left {
+        position: absolute;
+        // position in centre of circle
+        top: 50%;
+        left: 50%;
+        transform: translate(-67%, -53%);
+    }
+
+    &__slide {
+        background-color: $color-dark-grey;
+        box-sizing: border-box;
+        color: #FFF;
+        height: 100%;
+        position: absolute;
+        transform: translateX(-100%);
+        transition: all 0s .5s; // delay the out transition
+        width: 100%;
+        
+        &--active {
+            transform: translateX(0);
+            transition: all .5s cubic-bezier(.17,.67,0,1.01);
+            z-index: 1;
+        }
+        
+        &--1 {
+            background-size: cover;
+            height: 100%;
+            width: 100%;
+        }
+        
+        &--2 {
+            background-color: red;
+        }
+        
+        &--3 {
+            background-color: blue;
+        }
+    }
+
+    &__nav {
+        position: relative;
+        height: 5rem;
+        bottom: 0;
+    }
+      
+    &__button {
+        // circular buttons
+        background-color: rgba(0,0,0,.1);
+        border-radius: 50%;
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        height: 1.2rem;
+        width: 1.2rem;
+        
+        &--active {
+          background-color: $color-secondary;
+        }
+    }
+
+    &__title {
+        background-image: linear-gradient(to bottom right, $color-grey, $color-dark-grey);
+        color: #FFF;
+        clip-path: polygon(0 0, 100% -1px, 88% 100%, 0% 100%);
+        float: left;
+        height: 100%;
+        position: absolute;
+        width: 58%;
+
+        @include respond(tab-port) {
+            clip-path: polygon(0 0, 100% -1%, 100% 88%, 0% 100%);
+            height: 58%;
+            width: 100%;
+            z-index: 1;
+        }
+
+        &--twitfriends {
+            background-image: linear-gradient(to bottom right, #6e00ff, #534771);
+        }
+
+        &--argmana {
+            background-image: linear-gradient(to bottom right, #3e4865, #36498c);
+        }
+    }
+
+    &__screenshot {
+        background-size: cover;
+        box-shadow: inset rgba(0,0,0,1) 1px 1px 100px 8px;
+        float: right;
+        height: 100%;
+        width: 50%;
+
+        @include respond(tab-port) {
+            float: none;
+            height: 50%;
+            width: 100%;
+            transform: translateY(100%);
+        }
+
+        &--1 {
+            background-image: url('/images/twitfriends-ss.jpg');
+            transition: all .5s;
+        }
+
+        &--2 {
+            background-image: url('/images/argmana-ss.jpg');
+        }
+    }
+}

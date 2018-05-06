@@ -1,0 +1,108 @@
+body {
+    color: $color-grey;
+    font-family: 'Lato', sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.7;
+}
+
+.heading {
+    &__main {
+        color: #FFF;
+        font-family: 'Anton', sans-serif;
+        font-size: 8rem;
+        text-transform: uppercase;
+        text-align: center;
+        pointer-events: none;
+        position: relative;
+        transform: skewX(-10deg);
+
+        @include respond(tab-land) {
+            font-size: 6.4rem;
+        }
+
+        @include respond(mobile) {
+            font-size: 5.8rem;
+        }
+
+        &--sub {
+            color: #FFF;
+            font-size: 4rem;
+            pointer-events: none;            
+            text-align: center;
+            text-transform: uppercase;
+            transform: skewX(-10deg);
+
+            @include respond(tab-land) {
+                font-size: 3.2rem;
+            }
+    
+            @include respond(mobile) {
+                font-size: 2.9rem;
+            }
+        }
+    }
+
+    &__primary {
+        color: $color-dark-grey;
+        font-size: 4.2rem;
+        pointer-events: none;        
+        text-align: center;
+        text-transform: uppercase;
+
+        @include respond(tab-land) {
+            font-size: 3.4rem;
+        }
+
+        @include respond(mobile) {
+            font-size: 3.1rem;
+        }
+
+        &--light {
+            color: #FFF;
+        }
+    }
+
+    &__secondary {
+        color: $color-dark-grey;
+        font-size: 3rem;
+        pointer-events: none;                    
+        text-align: center;
+        text-transform: uppercase;
+
+        @include respond(tab-land) {
+            font-size: 2.6rem;
+        }
+
+        @include respond(mobile) {
+            font-size: 2.5rem;
+        }
+
+        &--light {
+            color: #FFF;
+        }
+    }
+
+    &__tertiary {
+        color: $color-medium-grey;
+        font-size: 2.6rem;
+        text-transform: uppercase;
+
+        @include respond(tab-land) {
+            font-size: 2.3rem;
+        }
+
+        @include respond(mobile) {
+            font-size: 2.2rem;
+        }
+    }
+}
+
+.light-anchor {
+    &:link {
+        color: #8affff;
+    }
+
+    &:visited, &:hover, &:active {
+        color: #ff62dd;
+    }
+}

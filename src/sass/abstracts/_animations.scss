@@ -1,0 +1,21 @@
+@keyframes rotate {
+    0% {
+        transform: perspective(0) rotateY(0);
+    }
+
+    25% {
+        transform: perspective(75px) rotateY(90deg);        
+    }
+
+    50% {
+        transform: perspective(0) rotateY(180deg);
+    }
+
+    75% {
+        transform: perspective(75px) rotateY(270deg);  
+    }
+
+    100% {
+        transform: perspective(0) rotateY(360deg);         
+    }
+}

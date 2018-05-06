@@ -1,0 +1,83 @@
+.accordion { 
+  
+    &__heading {
+        background-color: rgba(0,0,0,.08);
+        border: none;
+        box-shadow: rgba(0, 0, 0, .5) 0px 1px 6px 0px;
+        color: #FFF;
+        padding: 2rem 1rem;
+        position: relative;
+        text-align: left;
+        transition: background-color .25s, 
+                    transform .25s;
+        width: 100%;
+      
+        &:hover, &:focus {
+            background-color: rgba(0,0,0,.1);
+            cursor: pointer;
+
+            & svg {
+                animation: rotate 2s infinite ease-out;                
+            }
+        }
+
+        &:focus {
+            outline: none; // there is a clear change when button is active so outline not necessary for accessibility
+        }
+      
+        &--active {
+            background-color: rgba(0,0,0,.1);
+            
+            & svg {
+                animation: rotate 2s infinite ease-out;
+            }
+        }
+    }
+   
+    &__expand-icon {
+        content: "";
+        height: 1.5rem;
+        margin-right: 1.5rem;
+        position: absolute;
+        pointer-events: none;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 1.5rem;
+    }
+   
+    &__icon-vertical {
+        background-color: $color-dark-grey;
+        height: 15px;
+        left: 50%;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        transition: transform .5s;
+        width: 4px;
+      
+        &--active {
+            transform: translate(-50%, -50%) rotate(90deg);
+        }
+    }
+  
+    &__icon-horizontal {
+        background-color: $color-dark-grey;
+        height: 4px;
+        left: 50%;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 15px;
+    }
+   
+    &__panel {
+        background-color: rgba(0,0,0,.05);
+        box-shadow: rgba(0, 0, 0, .5) 0px 1px 6px 0px;        
+        margin-bottom: 10px;
+        max-height: 0;
+        overflow: hidden;
+        padding: 0 4rem;
+        transition: max-height .25s ease-out;
+    }
+}

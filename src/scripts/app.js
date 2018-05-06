@@ -1,0 +1,9 @@
+import svgxuse from 'svgxuse'; // polyfill to load svgs from external URI (unsupported by IE)
+
+import Accordion from './modules/Accordion';
+import Carousel from './modules/Carousel';
+import Navigation from './modules/Navigation';
+
+const accordion = new Accordion;
+const navigation = new Navigation;
+const carousel = new Carousel;
