@@ -100,10 +100,13 @@
         display: inline-block;
         position: relative;
         height: 1.2rem;
+        margin: 0 .2rem;
+        transition: transform .25s ease-out;        
         width: 1.2rem;
         
         &--active {
           background-color: $color-secondary;
+          transform: scale(1.3);
         }
     }
 

@@ -12,7 +12,6 @@ body {
         font-size: 8rem;
         text-transform: uppercase;
         text-align: center;
-        pointer-events: none;
         position: relative;
         transform: skewX(-10deg);
 
@@ -27,7 +26,7 @@ body {
         &--sub {
             color: #FFF;
             font-size: 4rem;
-            pointer-events: none;            
+            
             text-align: center;
             text-transform: uppercase;
             transform: skewX(-10deg);
@@ -44,8 +43,7 @@ body {
 
     &__primary {
         color: $color-dark-grey;
-        font-size: 4.2rem;
-        pointer-events: none;        
+        font-size: 4.2rem;        
         text-align: center;
         text-transform: uppercase;
 
@@ -64,8 +62,7 @@ body {
 
     &__secondary {
         color: $color-dark-grey;
-        font-size: 3rem;
-        pointer-events: none;                    
+        font-size: 3rem;                    
         text-align: center;
         text-transform: uppercase;
 
@@ -79,6 +76,10 @@ body {
 
         &--light {
             color: #FFF;
+        }
+
+        &--no-pointer-events {
+            pointer-events: none;
         }
     }
 

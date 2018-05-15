@@ -3,7 +3,6 @@
     &__heading {
         background-color: rgba(0,0,0,.08);
         border: none;
-        box-shadow: rgba(0, 0, 0, .5) 0px 1px 6px 0px;
         color: #FFF;
         padding: 2rem 1rem;
         position: relative;
@@ -13,20 +12,18 @@
         width: 100%;
       
         &:hover, &:focus {
-            background-color: rgba(0,0,0,.1);
+            background-color: rgba(0,0,0,.2);
             cursor: pointer;
+        }
 
+        &:hover {
             & svg {
                 animation: rotate 2s infinite ease-out;                
             }
         }
-
-        &:focus {
-            outline: none; // there is a clear change when button is active so outline not necessary for accessibility
-        }
       
         &--active {
-            background-color: rgba(0,0,0,.1);
+            background-color: rgba(0,0,0,.2);
             
             & svg {
                 animation: rotate 2s infinite ease-out;
@@ -72,8 +69,7 @@
     }
    
     &__panel {
-        background-color: rgba(0,0,0,.05);
-        box-shadow: rgba(0, 0, 0, .5) 0px 1px 6px 0px;        
+        background-color: rgba(0,0,0,.05);        
         margin-bottom: 10px;
         max-height: 0;
         overflow: hidden;
