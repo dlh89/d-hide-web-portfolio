@@ -1,32 +1,32 @@
 .banner-left {
-    background-image: linear-gradient(
-        rgba(darken($color-secondary, 10%), 0.8),
-        rgba(lighten($color-primary, 10%), 0.8)),
-        url('/images/unsplash-building.jpg');
-    background-size: cover;
-    clip-path: polygon(0 0, 100% 0%, 88% 100%, 0% 100%);
-    min-height: 80vh;
-    position: relative;
+  background-image: linear-gradient(
+    rgba(darken($color-secondary, 10%), 0.8),
+    rgba(lighten($color-primary, 10%), 0.8)
+  );
+  background-size: cover;
+  clip-path: polygon(0 0, 100% 0%, 88% 100%, 0% 100%);
+  min-height: 80vh;
+  position: relative;
 
-    @include respond(tab-port) {
-        min-height: 52vh;
-        clip-path: polygon(0 0, 100% 0, 100% 88%, 0% 100%);
-    }
+  @include respond(tab-port) {
+    min-height: 52vh;
+    clip-path: polygon(0 0, 100% 0, 100% 88%, 0% 100%);
+  }
 }
 
 .banner-right {
-    min-height: 80vh;
-    position: relative;
+  min-height: 80vh;
+  position: relative;
 
-    @include respond(tab-port) {
-        min-height: 48vh;
-    }
+  @include respond(tab-port) {
+    min-height: 48vh;
+  }
 }
 
 .banner-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    white-space: nowrap;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
 }
