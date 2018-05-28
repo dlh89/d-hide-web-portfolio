@@ -348,10 +348,10 @@ body {
         width: 100%;
         transform: translateY(100%); } }
     .carousel__screenshot--1 {
-      background-image: url("images/twitfriends-ss.jpg");
+      background-image: url("../images/twitfriends-ss.jpg");
       transition: all 0.5s; }
     .carousel__screenshot--2 {
-      background-image: url("images/argmana-ss.jpg"); }
+      background-image: url("../images/argmana-ss.jpg"); }
 
 .contact-form__input, .contact-form__text, .contact-form__message {
   background-color: rgba(0, 0, 0, 0.1);
