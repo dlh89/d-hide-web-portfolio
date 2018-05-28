@@ -1,11 +1,11 @@
-var path = require('path');
+const path = require('path');
 
 module.exports = {
   mode: 'development',
   entry: ['babel-polyfill', './src/scripts/app.js'],
   output: {
     path: path.resolve(__dirname),
-    filename: 'app.bundle.js'
+    filename: 'app.bundle.js',
   },
   module: {
     rules: [
@@ -15,11 +15,11 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['es2015']
-          }
-        }
-      }
-    ]
+            presets: ['env'],
+          },
+        },
+      },
+    ],
   },
-  watch: true
+  watch: true,
 };
