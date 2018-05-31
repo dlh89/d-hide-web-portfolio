@@ -9,7 +9,7 @@
 
   & li::before {
     content: "";
-    background-image: url("~/images/checkbox-checked.svg");
+    background-image: url("../images/checkbox-checked.svg");
     background-size: cover;
     display: inline-block;
     height: 2rem;
@@ -20,7 +20,7 @@
     @supports (mask-image: url()) or (-webkit-mask-image: url()) {
       background-color: $color-green;
       background-image: none;
-      mask-image: url("~/images/checkbox-checked.svg");
+      mask-image: url("../images/checkbox-checked.svg");
       mask-size: cover;
     }
   }

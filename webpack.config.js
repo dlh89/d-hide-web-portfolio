@@ -30,7 +30,7 @@ module.exports = {
       // compile all .scss files to plain old css
       {
         test: /\.(scss)$/,
-        use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader', 'sass-loader'],
+        use: [MiniCssExtractPlugin.loader, 'css-loader?url=false', 'postcss-loader', 'sass-loader'],
       },
     ],
   },

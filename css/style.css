@@ -166,7 +166,7 @@ body {
     margin-bottom: 1.2rem; }
   .about-list li::before {
     content: "";
-    background-image: url("/images/checkbox-checked.svg");
+    background-image: url("../images/checkbox-checked.svg");
     background-size: cover;
     display: inline-block;
     height: 2rem;
@@ -177,8 +177,8 @@ body {
       .about-list li::before {
         background-color: #048b14;
         background-image: none;
-        -webkit-mask-image: url("/images/checkbox-checked.svg");
-                mask-image: url("/images/checkbox-checked.svg");
+        -webkit-mask-image: url("../images/checkbox-checked.svg");
+                mask-image: url("../images/checkbox-checked.svg");
         -webkit-mask-size: cover;
                 mask-size: cover; } }
 
@@ -400,10 +400,10 @@ body {
         -webkit-transform: translateY(100%);
                 transform: translateY(100%); } }
     .carousel__screenshot--1 {
-      background-image: url("/images/twitfriends-ss.jpg");
+      background-image: url("../images/twitfriends-ss.jpg");
       transition: all 0.5s; }
     .carousel__screenshot--2 {
-      background-image: url("/images/argmana-ss.jpg"); }
+      background-image: url("../images/argmana-ss.jpg"); }
 
 .contact-form__input, .contact-form__text, .contact-form__message {
   background-color: rgba(0, 0, 0, 0.1);
