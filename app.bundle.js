@@ -62,7 +62,7 @@
 /******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
 /******/
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "";
+/******/ 	__webpack_require__.p = "/";
 /******/
 /******/
 /******/ 	// Load entry module and return exports
@@ -3782,6 +3782,17 @@ eval("var g;\r\n\r\n// This works in non-strict mode\r\ng = (function() {\r\n\tr
 
 /***/ }),
 
+/***/ "./src/sass/main.scss":
+/*!****************************!*\
+  !*** ./src/sass/main.scss ***!
+  \****************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/sass/main.scss?");
+
+/***/ }),
+
 /***/ "./src/scripts/app.js":
 /*!****************************!*\
   !*** ./src/scripts/app.js ***!
@@ -3831,13 +3842,13 @@ eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n
 /***/ }),
 
 /***/ 0:
-/*!*************************************************!*\
-  !*** multi babel-polyfill ./src/scripts/app.js ***!
-  \*************************************************/
+/*!**********************************************************************!*\
+  !*** multi babel-polyfill ./src/scripts/app.js ./src/sass/main.scss ***!
+  \**********************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("__webpack_require__(/*! babel-polyfill */\"./node_modules/babel-polyfill/lib/index.js\");\nmodule.exports = __webpack_require__(/*! ./src/scripts/app.js */\"./src/scripts/app.js\");\n\n\n//# sourceURL=webpack:///multi_babel-polyfill_./src/scripts/app.js?");
+eval("__webpack_require__(/*! babel-polyfill */\"./node_modules/babel-polyfill/lib/index.js\");\n__webpack_require__(/*! ./src/scripts/app.js */\"./src/scripts/app.js\");\nmodule.exports = __webpack_require__(/*! ./src/sass/main.scss */\"./src/sass/main.scss\");\n\n\n//# sourceURL=webpack:///multi_babel-polyfill_./src/scripts/app.js_./src/sass/main.scss?");
 
 /***/ })
 

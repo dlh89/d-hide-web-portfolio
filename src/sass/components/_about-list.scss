@@ -1,29 +1,27 @@
 .about-list {
-    font-size: 2rem;
-    list-style: none;
-    margin-bottom: 2.4rem;
-    
-    > li {
-        margin-bottom: 1.2rem;
-    }
+  font-size: 2rem;
+  list-style: none;
+  margin-bottom: 2.4rem;
 
-    & li::before {
-        content: "";
-        background-image: url(../images/checkbox-checked.svg);
-        background-size: cover;
-        display: inline-block;
-        height: 2rem;
-        width: 2rem;
-        margin-bottom: -.3rem;
-        margin-right: .7rem;
+  > li {
+    margin-bottom: 1.2rem;
+  }
 
-        @supports (mask-image: url()) or (-webkit-mask-image: url()) {
-            background-color: $color-green;
-            background-image: none;
-            mask-image: url(../images/checkbox-checked.svg);
-            mask-size: cover;
-            -webkit-mask-image: url(../images/checkbox-checked.svg);
-            -webkit-mask-size: cover;
-        }
+  & li::before {
+    content: "";
+    background-image: url("~/images/checkbox-checked.svg");
+    background-size: cover;
+    display: inline-block;
+    height: 2rem;
+    width: 2rem;
+    margin-bottom: -0.3rem;
+    margin-right: 0.7rem;
+
+    @supports (mask-image: url()) or (-webkit-mask-image: url()) {
+      background-color: $color-green;
+      background-image: none;
+      mask-image: url("~/images/checkbox-checked.svg");
+      mask-size: cover;
     }
+  }
 }

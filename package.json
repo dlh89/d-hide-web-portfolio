@@ -4,17 +4,22 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "watch:sass": "node-sass src/sass/main.scss css/style.css -w",
     "devserver": "live-server",
-    "start": "npm-run-all --parallel watch:sass build devserver",
+    "start": "npm-run-all --parallel build devserver",
     "build": "webpack"
   },
   "author": "David Hide",
   "license": "ISC",
   "devDependencies": {
     "autoprefixer": "^8.2.0",
-    "node-sass": "^4.8.3",
+    "css-loader": "^0.28.11",
+    "mini-css-extract-plugin": "^0.4.0",
+    "node-sass": "^4.9.0",
     "npm-run-all": "^4.1.2",
+    "optimize-css-assets-webpack-plugin": "^4.0.2",
+    "postcss-loader": "^2.1.5",
+    "sass-loader": "^7.0.1",
+    "uglifyjs-webpack-plugin": "^1.2.5",
     "webpack": "^4.4.1",
     "webpack-cli": "^2.0.13"
   },
