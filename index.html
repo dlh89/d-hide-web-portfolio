@@ -316,11 +316,18 @@
                 Contact
             </h3>
             <div class="container u-margin-top-medium u-padding-bottom-large">
-                <form name="contact" method="POST" netlify class="contact-form">
-                    <label name="email-address" class="contact-form__label" for="email" placeholder="email">email</label>
-                    <input type="email" class="contact-form__input" placeholder="your@email.com" required>
+                <form name="contact" netlify-honeypot="bot-field" method="POST" netlify class="contact-form">
+                    <p class="u-hidden">
+                        <label>Don’t fill this out if you're human:
+                            <input name="bot-field">
+                        </label>
+                    </p>
+                    <label class="contact-form__label" for="name" placeholder="Your name">What's your name?</label>
+                    <input name="name" type="text" class="contact-form__input" placeholder="Your name" required>
+                    <label class="contact-form__label" for="email" placeholder="Your email address">What's your email address?</label>
+                    <input name="email-address" type="email" class="contact-form__input" placeholder="your@email.com" required>
                     <label class="contact-form__label" for="message">Message</label>
-                    <textarea name="message" class="contact-form__text" id="message" name="message" placeholder="Your message..." required></textarea>
+                    <textarea name="message" class="contact-form__text" id="message" placeholder="Your message..." required></textarea>
                     <button class="contact-form__submit" type="submit" id="form-submit">Submit</button>
                 </form>
             </div>

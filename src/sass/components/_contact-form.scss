@@ -1,52 +1,50 @@
 .contact-form {
-    &__input,
-    &__text,
-    &__message {
-        background-color: rgba(0,0,0,.1);
-        border: none;
-        color: #FFF;
-        display: block;
-        margin: 1.5rem 0;
-        padding: 1.5rem;
-        transition: background-color .5s ease-out;
-        width: 100%;
-        
-        &:focus {
-            background-color: rgba(0,0,0,.2);
-        }
-        
-        &::placeholder {
-            color: rgba(250,250,250,.5);
-            font-family: inherit;
-        }
+  &__input,
+  &__text,
+  &__message {
+    background-color: rgba(0, 0, 0, 0.1);
+    border: none;
+    color: #fff;
+    display: block;
+    margin: 1.5rem 0;
+    padding: 1.5rem;
+    transition: background-color 0.5s ease-out;
+    width: 100%;
+
+    &:focus {
+      background-color: rgba(0, 0, 0, 0.2);
     }
-    
-    &__label {
-        color: #FFF;
-        font-size: 1.2rem;
-        text-shadow: 1px 1px 5px rgba(0,0,0,.5);
-    }
-    
-    &__input {
-      
-    }
-    
-    &__text {
-        font-family: inherit;
-        height: 12rem;
-        resize: none;
-    }
-    
-    &__submit {
-        background-color: $color-green;
-        border: none;
-        color: #FFF;
-        cursor: pointer;
-        padding: 1rem 3rem;
-        transition: background-color .2s;
-        
-        &:hover {
-            background-color: darken($color-green, 10%);
-        }
+
+    &::placeholder {
+      color: rgba(250, 250, 250, 0.85);
+      font-family: inherit;
     }
   }
+
+  &__label {
+    color: $color-grey;
+    font-size: 1.6rem;
+  }
+
+  &__input {
+  }
+
+  &__text {
+    font-family: inherit;
+    height: 12rem;
+    resize: none;
+  }
+
+  &__submit {
+    background-color: $color-green;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    padding: 1rem 3rem;
+    transition: background-color 0.2s;
+
+    &:hover {
+      background-color: darken($color-green, 10%);
+    }
+  }
+}
