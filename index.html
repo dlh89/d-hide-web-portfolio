@@ -316,16 +316,12 @@
                 Contact
             </h3>
             <div class="container u-margin-top-medium u-padding-bottom-large">
-                <form action="#" class="contact-form">
-                    <label class="contact-form__label" for="firstName">First name</label>
-                    <input type="text" class="contact-form__input" placeholder="First name">
-                    <label class="contact-form__label" for="lastName" placeholder="Last name">Last name</label>
-                    <input type="text" class="contact-form__input" placeholder="Last name">
-                    <label class="contact-form__label" for="email" placeholder="email">email</label>
-                    <input type="email" class="contact-form__input" placeholder="your@email.com">
+                <form name="contact" method="POST" netlify class="contact-form">
+                    <label name="email-address" class="contact-form__label" for="email" placeholder="email">email</label>
+                    <input type="email" class="contact-form__input" placeholder="your@email.com" required>
                     <label class="contact-form__label" for="message">Message</label>
-                    <textarea class="contact-form__text" id="message" name="message" placeholder="Your message..."></textarea>
-                    <input class="contact-form__submit" type="submit" value="Submit">
+                    <textarea name="message" class="contact-form__text" id="message" name="message" placeholder="Your message..." required></textarea>
+                    <button class="contact-form__submit" type="submit" id="form-submit">Submit</button>
                 </form>
             </div>
         </section>
