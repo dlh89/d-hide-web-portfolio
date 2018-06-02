@@ -32,6 +32,74 @@
     -webkit-transform: perspective(0) rotateY(360deg);
             transform: perspective(0) rotateY(360deg); } }
 
+@-webkit-keyframes scroll-up {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0); }
+  100% {
+    -webkit-transform: translate3d(0, -798px, 0);
+            transform: translate3d(0, -798px, 0); } }
+
+@keyframes scroll-up {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0); }
+  100% {
+    -webkit-transform: translate3d(0, -798px, 0);
+            transform: translate3d(0, -798px, 0); } }
+
+@-webkit-keyframes slide-up {
+  0% {
+    opacity: 0;
+    -webkit-transform: skewX(-10deg) translateY(798px);
+            transform: skewX(-10deg) translateY(798px); }
+  100% {
+    opacity: 1;
+    -webkit-transform: skewX(-10deg) translateY(0);
+            transform: skewX(-10deg) translateY(0); } }
+
+@keyframes slide-up {
+  0% {
+    opacity: 0;
+    -webkit-transform: skewX(-10deg) translateY(798px);
+            transform: skewX(-10deg) translateY(798px); }
+  100% {
+    opacity: 1;
+    -webkit-transform: skewX(-10deg) translateY(0);
+            transform: skewX(-10deg) translateY(0); } }
+
+@-webkit-keyframes zoom-up {
+  0% {
+    -webkit-transform: translateY(798px);
+            transform: translateY(798px); }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0); } }
+
+@keyframes zoom-up {
+  0% {
+    -webkit-transform: translateY(798px);
+            transform: translateY(798px); }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0); } }
+
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0; }
+  50% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@keyframes fade-in {
+  0% {
+    opacity: 0; }
+  50% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
 *,
 *::after,
 *::before {
@@ -56,13 +124,15 @@ html {
 
 body {
   color: #797979;
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   font-size: 1.6rem;
   line-height: 1.7; }
 
 .heading__main {
-  color: #FFF;
-  font-family: 'Anton', sans-serif;
+  -webkit-animation: slide-up 1s ease-out;
+          animation: slide-up 1s ease-out;
+  color: #fff;
+  font-family: "Anton", sans-serif;
   font-size: 8rem;
   text-transform: uppercase;
   text-align: center;
@@ -76,7 +146,9 @@ body {
     .heading__main {
       font-size: 5.8rem; } }
   .heading__main--sub {
-    color: #FFF;
+    -webkit-animation: fade-in 1.5s ease-out;
+            animation: fade-in 1.5s ease-out;
+    color: #fff;
     font-size: 4rem;
     text-align: center;
     text-transform: uppercase;
@@ -101,7 +173,7 @@ body {
     .heading__primary {
       font-size: 3.1rem; } }
   .heading__primary--light {
-    color: #FFF; }
+    color: #fff; }
 
 .heading__secondary {
   color: #333;
@@ -115,7 +187,7 @@ body {
     .heading__secondary {
       font-size: 2.5rem; } }
   .heading__secondary--light {
-    color: #FFF; }
+    color: #fff; }
   .heading__secondary--no-pointer-events {
     pointer-events: none; }
 
@@ -252,17 +324,26 @@ body {
   transition: max-height .25s ease-out; }
 
 .banner-left {
-  background-image: linear-gradient(rgba(0, 142, 149, 0.8), rgba(211, 255, 217, 0.8));
-  background-size: cover;
+  background-image: linear-gradient(to bottom right, #333, #004549);
   -webkit-clip-path: polygon(0 0, 100% 0%, 88% 100%, 0% 100%);
           clip-path: polygon(0 0, 100% 0%, 88% 100%, 0% 100%);
   min-height: 80vh;
+  overflow: hidden;
   position: relative; }
   @media (max-width: 56.25em) {
     .banner-left {
       min-height: 52vh;
       -webkit-clip-path: polygon(0 0, 100% 0, 100% 88%, 0% 100%);
               clip-path: polygon(0 0, 100% 0, 100% 88%, 0% 100%); } }
+  .banner-left::after {
+    -webkit-animation: zoom-up 1s ease-out, scroll-up 30s 1s linear infinite;
+            animation: zoom-up 1s ease-out, scroll-up 30s 1s linear infinite;
+    background: url("../images/stardust.png") repeat;
+    content: "";
+    display: block;
+    height: 2394px;
+    position: absolute;
+    width: 100%; }
 
 .banner-right {
   min-height: 80vh;
@@ -277,7 +358,8 @@ body {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  white-space: nowrap; }
+  white-space: nowrap;
+  z-index: 99; }
 
 .carousel {
   position: relative;
@@ -331,7 +413,9 @@ body {
     position: absolute;
     -webkit-transform: translateX(-100%);
             transform: translateX(-100%);
-    transition: all 0s 0.5s;
+    transition: -webkit-transform 0s 0.5s;
+    transition: transform 0s 0.5s;
+    transition: transform 0s 0.5s, -webkit-transform 0s 0.5s;
     width: 100%; }
     .carousel__slide--active {
       -webkit-transform: translateX(0);
@@ -342,8 +426,6 @@ body {
       background-size: cover;
       height: 100%;
       width: 100%; }
-    .carousel__slide--2 {
-      background-color: red; }
     .carousel__slide--3 {
       background-color: blue; }
   .carousel__nav {

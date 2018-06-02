@@ -1,109 +1,112 @@
 body {
-    color: $color-grey;
-    font-family: 'Lato', sans-serif;
-    font-size: 1.6rem;
-    line-height: 1.7;
+  color: $color-grey;
+  font-family: "Lato", sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.7;
 }
 
 .heading {
-    &__main {
-        color: #FFF;
-        font-family: 'Anton', sans-serif;
-        font-size: 8rem;
-        text-transform: uppercase;
-        text-align: center;
-        position: relative;
-        transform: skewX(-10deg);
+  &__main {
+    animation: slide-up 1s ease-out;
+    color: #fff;
+    font-family: "Anton", sans-serif;
+    font-size: 8rem;
+    text-transform: uppercase;
+    text-align: center;
+    position: relative;
+    transform: skewX(-10deg);
 
-        @include respond(tab-land) {
-            font-size: 6.4rem;
-        }
-
-        @include respond(mobile) {
-            font-size: 5.8rem;
-        }
-
-        &--sub {
-            color: #FFF;
-            font-size: 4rem;
-            
-            text-align: center;
-            text-transform: uppercase;
-            transform: skewX(-10deg);
-
-            @include respond(tab-land) {
-                font-size: 3.2rem;
-            }
-    
-            @include respond(mobile) {
-                font-size: 2.9rem;
-            }
-        }
+    @include respond(tab-land) {
+      font-size: 6.4rem;
     }
 
-    &__primary {
-        color: $color-dark-grey;
-        font-size: 4.2rem;        
-        text-align: center;
-        text-transform: uppercase;
-
-        @include respond(tab-land) {
-            font-size: 3.4rem;
-        }
-
-        @include respond(mobile) {
-            font-size: 3.1rem;
-        }
-
-        &--light {
-            color: #FFF;
-        }
+    @include respond(mobile) {
+      font-size: 5.8rem;
     }
 
-    &__secondary {
-        color: $color-dark-grey;
-        font-size: 3rem;                    
-        text-align: center;
-        text-transform: uppercase;
+    &--sub {
+      animation: fade-in 1.5s ease-out;
+      color: #fff;
+      font-size: 4rem;
+      text-align: center;
+      text-transform: uppercase;
+      transform: skewX(-10deg);
 
-        @include respond(tab-land) {
-            font-size: 2.6rem;
-        }
+      @include respond(tab-land) {
+        font-size: 3.2rem;
+      }
 
-        @include respond(mobile) {
-            font-size: 2.5rem;
-        }
+      @include respond(mobile) {
+        font-size: 2.9rem;
+      }
+    }
+  }
 
-        &--light {
-            color: #FFF;
-        }
+  &__primary {
+    color: $color-dark-grey;
+    font-size: 4.2rem;
+    text-align: center;
+    text-transform: uppercase;
 
-        &--no-pointer-events {
-            pointer-events: none;
-        }
+    @include respond(tab-land) {
+      font-size: 3.4rem;
     }
 
-    &__tertiary {
-        color: $color-medium-grey;
-        font-size: 2.6rem;
-        text-transform: uppercase;
-
-        @include respond(tab-land) {
-            font-size: 2.3rem;
-        }
-
-        @include respond(mobile) {
-            font-size: 2.2rem;
-        }
+    @include respond(mobile) {
+      font-size: 3.1rem;
     }
+
+    &--light {
+      color: #fff;
+    }
+  }
+
+  &__secondary {
+    color: $color-dark-grey;
+    font-size: 3rem;
+    text-align: center;
+    text-transform: uppercase;
+
+    @include respond(tab-land) {
+      font-size: 2.6rem;
+    }
+
+    @include respond(mobile) {
+      font-size: 2.5rem;
+    }
+
+    &--light {
+      color: #fff;
+    }
+
+    &--no-pointer-events {
+      pointer-events: none;
+    }
+  }
+
+  &__tertiary {
+    color: $color-medium-grey;
+    font-size: 2.6rem;
+    text-transform: uppercase;
+
+    @include respond(tab-land) {
+      font-size: 2.3rem;
+    }
+
+    @include respond(mobile) {
+      font-size: 2.2rem;
+    }
+  }
 }
 
 .light-anchor {
-    &:link {
-        color: #8affff;
-    }
+  &:link {
+    color: #8affff;
+  }
 
-    &:visited, &:hover, &:active {
-        color: #ff62dd;
-    }
+  &:visited,
+  &:hover,
+  &:active {
+    color: #ff62dd;
+  }
 }

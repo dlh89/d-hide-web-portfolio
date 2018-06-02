@@ -1,16 +1,28 @@
 .banner-left {
   background-image: linear-gradient(
-    rgba(darken($color-secondary, 10%), 0.8),
-    rgba(lighten($color-primary, 10%), 0.8)
+    to bottom right,
+    #333,
+    darken($color-secondary, 25%)
   );
-  background-size: cover;
   clip-path: polygon(0 0, 100% 0%, 88% 100%, 0% 100%);
   min-height: 80vh;
+  overflow: hidden;
   position: relative;
 
   @include respond(tab-port) {
     min-height: 52vh;
     clip-path: polygon(0 0, 100% 0, 100% 88%, 0% 100%);
+  }
+
+  &::after {
+    animation: zoom-up 1s ease-out, scroll-up 30s 1s linear infinite;
+    background: url("../images/stardust.png") repeat;
+    content: "";
+    display: block;
+    height: 2394px;
+    position: absolute;
+    width: 100%;
+    //z-index: -1;
   }
 }
 
@@ -29,4 +41,5 @@
   left: 50%;
   transform: translate(-50%, -50%);
   white-space: nowrap;
+  z-index: 99;
 }

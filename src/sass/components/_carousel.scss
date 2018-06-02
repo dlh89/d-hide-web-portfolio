@@ -62,7 +62,7 @@
     height: 100%;
     position: absolute;
     transform: translateX(-100%);
-    transition: all 0s 0.5s; // delay the out transition
+    transition: transform 0s 0.5s; // delay the out transition
     width: 100%;
 
     &--active {
@@ -78,7 +78,6 @@
     }
 
     &--2 {
-      background-color: red;
     }
 
     &--3 {
