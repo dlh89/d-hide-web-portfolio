@@ -1,28 +1,28 @@
 .icon {
-    height: 5rem;
-    width: 5rem;
-    fill: #333;
-    margin-bottom: -.8rem;
-    margin-right: .7rem;
-    pointer-events: none;
+  height: 5rem;
+  width: 5rem;
+  fill: #333;
+  margin-bottom: -0.8rem;
+  margin-right: 0.7rem;
+  pointer-events: none;
 
-    @include respond(tab-land) {
-        height: 3.8rem;
-        width: 3.8rem;
-    }
+  @include respond(tab-land) {
+    height: 3.8rem;
+    width: 3.8rem;
+  }
 
-    @include respond(mobile) {
-        height: 3.4rem;
-        width: 3.4rem;
-    }
+  @include respond(mobile) {
+    height: 3.4rem;
+    width: 3.4rem;
+  }
 
-    &--light {
-        fill: #FFF;
-    }
+  &--light {
+    fill: #fff;
+  }
 
-    &--small {
-        height: 2.5rem;
-        margin-bottom: 0;
-        width: 2.5rem;
-    }
+  &--small {
+    height: 2.5rem;
+    margin-bottom: 0;
+    width: 2.5rem;
+  }
 }
