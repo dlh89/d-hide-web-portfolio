@@ -30,13 +30,13 @@ class Carousel {
       }
     });
     if (e.target.className.includes('right')) {
-      if (slideIndex === 2) {
+      if (slideIndex === 3) {
         slideIndex = 0;
       } else {
         slideIndex += 1;
       }
     } else if (slideIndex === 0) {
-      slideIndex = 2;
+      slideIndex = 3;
     } else {
       slideIndex -= 1;
     }

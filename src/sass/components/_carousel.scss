@@ -131,7 +131,21 @@
       background-image: linear-gradient(to bottom right, #6e00ff, #534771);
     }
     &--argmana {
-      background-image: linear-gradient(to bottom right, #3e4865, #36498c);
+      background-image: linear-gradient(
+        to bottom right,
+        #ad0038,
+        darken(#ad0038, 15%)
+      );
+    }
+    &--podsend {
+      background-image: linear-gradient(to bottom right, #006a55, #00ad5d);
+    }
+    &--davidhide {
+      background-image: linear-gradient(
+        to bottom right,
+        #3799ff,
+        darken(#3799ff, 20%)
+      );
     }
   }
   &__screenshot {
@@ -147,11 +161,17 @@
       transform: translateY(100%);
     }
     &--1 {
-      background-image: url("../images/twitfriends-ss.jpg");
-      transition: all 0.5s;
+      background-image: url("../images/davidhide-ss.jpg");
     }
     &--2 {
+      background-image: url("../images/podsend-ss.jpg");
+    }
+    &--3 {
       background-image: url("../images/argmana-ss.jpg");
+    }
+    &--4 {
+      background-image: url("../images/twitfriends-ss.jpg");
+      transition: all 0.5s;
     }
   }
 }

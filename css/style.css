@@ -473,7 +473,11 @@ body {
     .carousel__title--twitfriends {
       background-image: linear-gradient(to bottom right, #6e00ff, #534771); }
     .carousel__title--argmana {
-      background-image: linear-gradient(to bottom right, #3e4865, #36498c); }
+      background-image: linear-gradient(to bottom right, #ad0038, #61001f); }
+    .carousel__title--podsend {
+      background-image: linear-gradient(to bottom right, #006a55, #00ad5d); }
+    .carousel__title--davidhide {
+      background-image: linear-gradient(to bottom right, #3799ff, #0066d0); }
   .carousel__screenshot {
     background-size: cover;
     box-shadow: inset black 1px 1px 100px 8px;
@@ -488,10 +492,14 @@ body {
         -webkit-transform: translateY(100%);
                 transform: translateY(100%); } }
     .carousel__screenshot--1 {
+      background-image: url("../images/davidhide-ss.jpg"); }
+    .carousel__screenshot--2 {
+      background-image: url("../images/podsend-ss.jpg"); }
+    .carousel__screenshot--3 {
+      background-image: url("../images/argmana-ss.jpg"); }
+    .carousel__screenshot--4 {
       background-image: url("../images/twitfriends-ss.jpg");
       transition: all 0.5s; }
-    .carousel__screenshot--2 {
-      background-image: url("../images/argmana-ss.jpg"); }
 
 .contact-form__input, .contact-form__text, .contact-form__message {
   background-color: rgba(0, 0, 0, 0.1);
