@@ -329,8 +329,8 @@
                 </svg>
                 Contact
             </h3>
-            <div class="container u-margin-top-medium u-padding-bottom-large">
-                <form name="contact" netlify-honeypot="bot-field" method="POST" netlify class="contact-form">
+            <div class="container u-margin-top-medium u-padding-bottom-large js-contact-form-container">
+                <form name="contact" honeypot="bot-field" class="contact-form js-contact-form">
                     <p class="u-hidden">
                         <label>Don’t fill this out if you're human:
                             <input name="bot-field">
@@ -344,6 +344,14 @@
                     <textarea name="message" class="contact-form__text" id="message" placeholder="Your message..." required></textarea>
                     <button class="contact-form__submit" type="submit" id="form-submit">Submit</button>
                 </form>
+                <div class="contact-form__success">
+                    <div class="contact-form__success-heading-container">
+                        <svg class="icon icon--left">
+                            <use xlink:href="images/sprite.svg#icon-check"></use>
+                        </svg>
+                        <div class="contact-form__success-heading">Success!</div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>

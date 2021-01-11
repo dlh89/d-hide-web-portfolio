@@ -2,9 +2,9 @@
   &__input,
   &__text,
   &__message {
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: #94ea9f;
     border: none;
-    color: #fff;
+    color: $color-dark-grey;
     display: block;
     margin: 1.5rem 0;
     padding: 1.5rem;
@@ -12,11 +12,11 @@
     width: 100%;
 
     &:focus {
-      background-color: rgba(0, 0, 0, 0.2);
+      background-color: #7aca85;
     }
 
     &::placeholder {
-      color: rgba(250, 250, 250, 0.85);
+      color: $color-dark-grey;
       font-family: inherit;
     }
   }
@@ -24,9 +24,13 @@
   &__label {
     color: $color-dark-grey;
     font-size: 1.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
   }
 
-  &__input {
+  &__input,
+  &__text {
+    font-size: 1.8rem;
   }
 
   &__text {
@@ -37,6 +41,8 @@
 
   &__submit {
     background-color: $color-green;
+    text-transform: uppercase;
+    font-weight: 700;
     border: none;
     color: #fff;
     cursor: pointer;
@@ -46,5 +52,29 @@
     &:hover {
       background-color: darken($color-green, 10%);
     }
+  }
+
+  &__success {
+    color: $color-dark-grey;
+    display: none;
+
+    &--active {
+      display: block;
+    }
+  }
+
+  &__success-heading-container {
+    @include clearfix;
+    margin-bottom: 1.2rem;
+  }
+
+  &__success-heading {
+    font-size: 3rem;
+    text-transform: uppercase;
+    float: left;
+  }
+
+  &--hidden {
+    display: none;
   }
 }
