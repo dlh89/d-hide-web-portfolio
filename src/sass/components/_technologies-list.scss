@@ -1,0 +1,21 @@
+.technologies-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  list-style: none;
+  @include clearfix;
+}
+
+.technologies-list li {
+  display: inline-block; // non-flexbox fallback
+  font-weight: 700;
+  padding-right: 11px;
+  padding-left: 11px;
+  padding-bottom: 11px;
+}
+
+.technologies-list svg {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: .8rem;
+}
