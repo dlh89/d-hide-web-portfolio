@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="400" height="400" viewBox="0 0 400 400">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_3" data-name="Rectangle 3" width="230" height="66" transform="translate(0 0)" fill="#333"/>
+    </clipPath>
+    <clipPath id="clip-path-2">
+      <rect id="Rectangle_4" data-name="Rectangle 4" width="230" height="66" transform="translate(0)" fill="#333"/>
+    </clipPath>
+    <clipPath id="clip-Web_1920_1">
+      <rect width="400" height="400"/>
+    </clipPath>
+  </defs>
+  <g id="Web_1920_1" data-name="Web 1920 – 1" clip-path="url(#clip-Web_1920_1)">
+    <circle id="Ellipse_1" data-name="Ellipse 1" cx="200" cy="200" r="200" fill="#fff"/>
+    <circle id="Ellipse_2" data-name="Ellipse 2" cx="175" cy="175" r="175" transform="translate(25 25)" fill="#3799ff"/>
+    <path id="Path_1" data-name="Path 1" d="M-198.907,20.027" transform="translate(292 133)" fill="none" stroke="#707070" stroke-width="1"/>
+    <g id="Mask_Group_2" data-name="Mask Group 2" transform="translate(85 126)" clip-path="url(#clip-path)">
+      <text id="DH" transform="matrix(1, 0, 0, -1, -8, -4)" fill="#fff" font-size="171" font-family="Arial-BoldMT, Arial" font-weight="700"><tspan x="0" y="0">DH</tspan></text>
+    </g>
+    <g id="Mask_Group_3" data-name="Mask Group 3" transform="translate(85 208)" clip-path="url(#clip-path-2)">
+      <text id="DH-2" data-name="DH" transform="translate(-8 70)" fill="#fff" font-size="171" font-family="Arial-BoldMT, Arial" font-weight="700"><tspan x="0" y="0">DH</tspan></text>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,42 @@
+.footer {
+    background-color: #333333;
+    padding: 40px 0;
+    color: #bdbdbd;
+    font-size: 1.4rem;
+}
+
+.footer__heading {
+    font-weight: 700;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.footer ul {
+    list-style: none;
+}
+
+.footer li {
+    margin-bottom: 1.4rem;
+}
+
+.footer ul a {
+    color: inherit;
+}
+
+.footer hr {
+    @supports not (
+      background-image:
+        linear-gradient(to right, $color-light-grey, transparent)
+    ) {
+      background-color: $color-light-grey;
+    }
+    background-image: linear-gradient(
+      to right,
+      $color-light-grey,
+      transparent
+    );
+    border: none;
+    height: 1px;
+    margin: 3.4rem 0;
+}
+

@@ -243,9 +243,14 @@ body {
   list-style: none;
   margin-bottom: 2.4rem; }
   .about-list > li {
-    margin-bottom: 1.2rem; }
+    position: relative;
+    margin-bottom: 1.2rem;
+    padding-left: 33px; }
   .about-list li::before {
     content: "";
+    position: absolute;
+    left: 0;
+    top: 7px;
     background-image: url("../images/checkbox-checked.svg");
     background-size: cover;
     display: inline-block;
@@ -606,6 +611,13 @@ body {
   .icon--left {
     float: left; }
 
+.icon--footer {
+  fill: #fff;
+  width: 25px;
+  height: 25px;
+  margin-bottom: -8px;
+  margin-right: .4rem; }
+
 .picture__photo {
   background-size: cover;
   border-radius: 50%;
@@ -640,6 +652,35 @@ body {
   display: block;
   margin: 0 auto;
   margin-bottom: .8rem; }
+
+.footer {
+  background-color: #333333;
+  padding: 40px 0;
+  color: #bdbdbd;
+  font-size: 1.4rem; }
+
+.footer__heading {
+  font-weight: 700;
+  font-size: 2rem;
+  margin-bottom: 1rem; }
+
+.footer ul {
+  list-style: none; }
+
+.footer li {
+  margin-bottom: 1.4rem; }
+
+.footer ul a {
+  color: inherit; }
+
+.footer hr {
+  background-image: linear-gradient(to right, #fafafa, transparent);
+  border: none;
+  height: 1px;
+  margin: 3.4rem 0; }
+  @supports not (background-image: linear-gradient(to right, #fafafa, transparent)) {
+    .footer hr {
+      background-color: #fafafa; } }
 
 .section-banner {
   background-color: #a0ffac; }
