@@ -7,38 +7,39 @@ body {
 
 .heading {
   &__main {
-    animation: slide-up 1s ease-out;
+    animation: slide-up-skewed 1s ease-out;
     color: #fff;
     font-family: "Anton", sans-serif;
-    font-size: 8rem;
+    font-size: 6.4rem;
     font-weight: 300;
     text-transform: uppercase;
     text-align: center;
     position: relative;
     transform: skewX(-10deg);
+    line-height: 1;
 
     @include respond(tab-land) {
-      font-size: 6.4rem;
+      font-size: 5.8rem;
     }
 
     @include respond(mobile) {
-      font-size: 5.8rem;
+      font-size: 4.8rem;
     }
 
     &--sub {
       animation: fade-in 1.5s ease-out;
       color: #fff;
-      font-size: 4rem;
+      font-size: 3.3rem;
       text-align: center;
       text-transform: uppercase;
       transform: skewX(-10deg);
 
       @include respond(tab-land) {
-        font-size: 3.2rem;
+        font-size:  2.9rem;
       }
 
       @include respond(mobile) {
-        font-size: 2.9rem;
+        font-size: 2.4rem;
       }
     }
   }

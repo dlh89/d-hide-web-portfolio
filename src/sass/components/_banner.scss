@@ -45,3 +45,39 @@
   white-space: nowrap;
   z-index: 99;
 }
+
+.banner-content--left {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: calc(100% - 84px); // subtract the skewed area
+  left: auto;
+  transform: none;
+  transform: translateY(-50%);
+}
+
+.banner-content__logo {
+  margin-right: 1rem;
+}
+.banner-content__logo svg {
+  animation: slide-up 1s ease-out;
+  width: 140px;
+  height: 140px;
+}
+
+@include respond(tab-port) {
+  .banner-content {
+    flex-direction: column;
+  }
+
+  .banner-content {
+    width: auto;
+  }
+
+  .banner-content__logo svg {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 1rem;
+  }
+}
