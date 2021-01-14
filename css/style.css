@@ -200,7 +200,6 @@ body {
 .heading__secondary {
   color: #333333;
   font-size: 3rem;
-  text-align: center;
   text-transform: uppercase; }
   @media (max-width: 75em) {
     .heading__secondary {
@@ -539,6 +538,8 @@ body {
       background-image: linear-gradient(to bottom right, #006a55, #00ad5d); }
     .carousel__title--davidhide {
       background-image: linear-gradient(to bottom right, #3799ff, #0066d0); }
+    .carousel__title--treasuredash {
+      background-image: linear-gradient(to bottom right, #002642, #071E22); }
   .carousel__screenshot {
     background-size: cover;
     box-shadow: inset black 1px 1px 100px 8px;
@@ -561,6 +562,8 @@ body {
     .carousel__screenshot--4 {
       background-image: url("../images/twitfriends-ss.jpg");
       transition: all 0.5s; }
+    .carousel__screenshot--5 {
+      background-image: url("../images/treasuredash-ss.png"); }
 
 .contact-form__input, .contact-form__text, .contact-form__message {
   background-color: #94ea9f;

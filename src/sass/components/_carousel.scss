@@ -147,6 +147,9 @@
         darken(#3799ff, 20%)
       );
     }
+    &--treasuredash {
+      background-image: linear-gradient(to bottom right, #002642, #071E22);
+    }
   }
   &__screenshot {
     background-size: cover;
@@ -172,6 +175,9 @@
     &--4 {
       background-image: url("../images/twitfriends-ss.jpg");
       transition: all 0.5s;
+    }
+    &--5 {
+      background-image: url("../images/treasuredash-ss.png");
     }
   }
 }

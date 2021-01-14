@@ -66,7 +66,6 @@ body {
   &__secondary {
     color: $color-dark-grey;
     font-size: 3rem;
-    text-align: center;
     text-transform: uppercase;
 
     @include respond(tab-land) {

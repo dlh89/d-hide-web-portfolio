@@ -14,14 +14,15 @@ class Carousel {
     const slideIndex = e.target.dataset.number - 1;
     // classes for slides
     Carousel.removeActiveClass(slides);
-    Carousel.addActiveClass(slides[slideIndex]);
+    slides[slideIndex].classList.add('carousel__slide--active');
 
     // classes for navButtons
     Carousel.removeActiveClass(navButtons);
-    Carousel.addActiveClass(e.target);
+    e.target.classList.add('carousel__button--active');
   }
 
   static nextOrPrev(e, slides, navButtons) {
+    const slideCount = slides.length;
     let slideIndex = 0;
     // find the active slide
     navButtons.forEach((button) => {
@@ -30,38 +31,32 @@ class Carousel {
       }
     });
     if (e.target.className.includes('right')) {
-      if (slideIndex === 3) {
+      if (slideIndex === slideCount - 1) {
         slideIndex = 0;
       } else {
         slideIndex += 1;
       }
-    } else if (slideIndex === 0) {
-      slideIndex = 3;
     } else {
-      slideIndex -= 1;
+      if (slideIndex === 0) {
+        slideIndex = slideCount - 1;
+      } else {
+        slideIndex -= 1;
+      }
     }
 
     // classes for slides
     Carousel.removeActiveClass(slides);
-    Carousel.addActiveClass(slides[slideIndex]);
+    slides[slideIndex].classList.add('carousel__slide--active');
 
     // classes for navButtons
     Carousel.removeActiveClass(navButtons);
-    Carousel.addActiveClass(navButtons[slideIndex]);
+    navButtons[slideIndex].classList.add('carousel__button--active');
   }
 
   static removeActiveClass(elements) {
     elements.forEach((element) => {
       element.className = element.className.replace('--active', '');
     });
-  }
-
-  static addActiveClass(element) {
-    if (element.className.includes('slide')) {
-      element.classList.add('carousel__slide--active');
-    } else {
-      element.classList.add('carousel__button--active');
-    }
   }
 }
 
