@@ -150,6 +150,12 @@
     &--treasuredash {
       background-image: linear-gradient(to bottom right, #002642, #071E22);
     }
+    &--prisonersdilemma {
+      background-image: linear-gradient(to bottom right, #000000, #2b2b2b);
+    }
+    &--timestamper {
+      background-image: linear-gradient(to bottom right, #860000, #272222);
+    }
   }
   &__screenshot {
     background-size: cover;
@@ -179,5 +185,37 @@
     &--5 {
       background-image: url("../images/treasuredash-ss.png");
     }
+    &--6 {
+      background-image: url("../images/battle-black-and-white-blur-131616-768x511.jpg");
+    }
+    &--7 {
+      background-image: url("../images/timestamper.gif");
+    }
+    &--8 {
+      background-image: url("../images/easy-php-error-logger.gif");
+    }
+  }
+}
+
+
+@include respond(tab-port) {
+  .carousel__title .u-absolute-center {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    margin: auto;
+    margin-top: 3.2rem;
+    width: calc(100% - ((44px + 15px) * 2));
+    padding-bottom: 54px;
+  }
+  
+  .carousel__title {
+    height: auto;
+    min-height: 50%;
+  }
+
+  .carousel {
+    height: 70rem;
   }
 }
