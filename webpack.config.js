@@ -1,55 +1,49 @@
 const path = require('path');
-
-// include the js minification plugin
-const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
-
-// include the css extraction and minification plugins
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
-  mode: 'development',
-  entry: ['babel-polyfill', './src/scripts/app.js', './src/sass/main.scss'],
-  output: {
-    path: path.resolve(__dirname),
-    filename: 'app.bundle.js',
-    publicPath: '/',
-  },
-  module: {
-    rules: [
-      {
-        test: /\.js$/,
-        exclude: /(node_modules|bower_components)/,
-        use: {
-          loader: 'babel-loader',
-          options: {
-            presets: ['env'],
-          },
-        },
-      },
-      // compile all .scss files to plain old css
-      {
-        test: /\.(scss)$/,
-        use: [MiniCssExtractPlugin.loader, 'css-loader?url=false', 'postcss-loader', 'sass-loader'],
-      },
-    ],
-  },
-  plugins: [
-    // extract css into dedicated file
-    new MiniCssExtractPlugin({
-      filename: './css/style.css',
-    }),
-  ],
-  optimization: {
-    minimizer: [
-      // enable the js minification plugin
-      new UglifyJSPlugin({
-        cache: true,
-        parallel: true,
-      }),
-      // enable the css minification plugin
-      new OptimizeCSSAssetsPlugin({}),
-    ],
-  },
-  watch: true,
+	mode: 'development',
+	entry: './src/scripts/app.js',
+	plugins: [
+		new HtmlWebpackPlugin({
+			title: 'Web Portfolio',
+			template: 'index.html',
+		}),
+		new CopyWebpackPlugin({
+			patterns: [
+				{ from: 'src/images', to: 'images', globOptions: { ignore: ['*.js'] } }
+			],
+		}),
+	],
+	output: {
+		filename: 'main.js',
+		path: path.resolve(__dirname, 'dist'),
+	},
+	module: {
+		rules: [
+			{
+				test: /\.s[ac]ss$/i,
+				use: [
+					// Creates `style` nodes from JS strings
+					"style-loader",
+					// Translates CSS into CommonJS
+					"css-loader",
+					// Compiles Sass to CSS
+					"sass-loader",
+				],
+			},
+			{
+				test: /\.(png|svg|jpg|jpeg|gif)$/i,
+				type: 'asset/resource',
+			},
+		],
+	},
+	devServer: {
+		static: {
+			directory: path.join(__dirname, 'dist'),
+		},
+		compress: true,
+		port: 9000,
+	},
 };

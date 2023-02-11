@@ -2,34 +2,26 @@
   "name": "web-portfolio",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "private": "true",
   "scripts": {
-    "devserver": "live-server",
-    "start": "npm-run-all --parallel build devserver",
-    "build": "webpack"
+    "build": "webpack serve"
   },
   "author": "David Hide",
   "license": "ISC",
   "devDependencies": {
-    "autoprefixer": "^8.2.0",
-    "css-loader": "^0.28.11",
-    "mini-css-extract-plugin": "^0.4.0",
-    "node-sass": "^4.9.0",
-    "npm-run-all": "^4.1.2",
-    "optimize-css-assets-webpack-plugin": "^4.0.2",
-    "postcss-loader": "^2.1.5",
-    "sass-loader": "^7.0.1",
-    "uglifyjs-webpack-plugin": "^1.2.5",
-    "webpack": "^4.20.2",
-    "webpack-cli": "^3.1.1"
+    "copy-webpack-plugin": "^11.0.0",
+    "css-loader": "^6.7.3",
+    "html-webpack-plugin": "^5.5.0",
+    "npm-run-all": "^4.1.5",
+    "sass": "^1.58.0",
+    "sass-loader": "^13.2.0",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1",
+    "webpack-dev-server": "^4.11.1"
   },
   "dependencies": {
-    "babel-core": "^6.26.0",
-    "babel-loader": "^7.1.4",
-    "babel-polyfill": "^6.26.0",
-    "babel-preset-env": "^1.6.1",
-    "eslint-config-with-prettier": "^3.4.0",
-    "smoothscroll-polyfill": "^0.4.3",
+    "smoothscroll-polyfill": "^0.4.4",
     "svgxuse": "^1.2.6"
   }
 }
