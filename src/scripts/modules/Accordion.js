@@ -10,7 +10,7 @@ class Accordion {
     heading.classList.toggle('accordion__heading--active');
 
     // rotate the plus icon by adding active class to vertical line
-    const iconVertical = e.target.childNodes[3].childNodes[1];
+    const iconVertical = heading.querySelector('.accordion__icon-vertical');
     iconVertical.classList.toggle('accordion__icon-vertical--active');
 
     // adjust the panel height
