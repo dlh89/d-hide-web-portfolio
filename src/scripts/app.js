@@ -1,3 +1,5 @@
+import '../sass/main.scss';
+
 import svgxuse from 'svgxuse'; // polyfill to load svgs from external URI (unsupported by IE)
 
 import Accordion from './modules/Accordion';
