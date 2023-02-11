@@ -1,8 +1,8 @@
-/******/ (() => { // webpackBootstrap
+/******/ (function() { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
 /***/ 523:
-/***/ ((module) => {
+/***/ (function(module) {
 
 /* smoothscroll v0.4.4 - 2019 - Dustan Kasten, Jeremias Menichelli - MIT License */
 (function () {
@@ -439,7 +439,7 @@
 /***/ }),
 
 /***/ 788:
-/***/ (() => {
+/***/ (function() {
 
 /*!
  * @copyright Copyright (c) 2017 IcoMoon.io
@@ -703,38 +703,38 @@
 /******/ 	
 /************************************************************************/
 /******/ 	/* webpack/runtime/compat get default export */
-/******/ 	(() => {
+/******/ 	!function() {
 /******/ 		// getDefaultExport function for compatibility with non-harmony modules
-/******/ 		__webpack_require__.n = (module) => {
+/******/ 		__webpack_require__.n = function(module) {
 /******/ 			var getter = module && module.__esModule ?
-/******/ 				() => (module['default']) :
-/******/ 				() => (module);
+/******/ 				function() { return module['default']; } :
+/******/ 				function() { return module; };
 /******/ 			__webpack_require__.d(getter, { a: getter });
 /******/ 			return getter;
 /******/ 		};
-/******/ 	})();
+/******/ 	}();
 /******/ 	
 /******/ 	/* webpack/runtime/define property getters */
-/******/ 	(() => {
+/******/ 	!function() {
 /******/ 		// define getter functions for harmony exports
-/******/ 		__webpack_require__.d = (exports, definition) => {
+/******/ 		__webpack_require__.d = function(exports, definition) {
 /******/ 			for(var key in definition) {
 /******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
 /******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
 /******/ 				}
 /******/ 			}
 /******/ 		};
-/******/ 	})();
+/******/ 	}();
 /******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
-/******/ 	(() => {
-/******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
-/******/ 	})();
+/******/ 	!function() {
+/******/ 		__webpack_require__.o = function(obj, prop) { return Object.prototype.hasOwnProperty.call(obj, prop); }
+/******/ 	}();
 /******/ 	
 /************************************************************************/
 var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be in strict mode.
-(() => {
+!function() {
 "use strict";
 
 // EXTERNAL MODULE: ./node_modules/svgxuse/svgxuse.js
@@ -765,7 +765,7 @@ class Accordion {
     }
   }
 }
-/* harmony default export */ const modules_Accordion = (Accordion);
+/* harmony default export */ var modules_Accordion = (Accordion);
 ;// CONCATENATED MODULE: ./src/scripts/modules/Carousel.js
 class Carousel {
   constructor() {
@@ -822,7 +822,7 @@ class Carousel {
     });
   }
 }
-/* harmony default export */ const modules_Carousel = (Carousel);
+/* harmony default export */ var modules_Carousel = (Carousel);
 // EXTERNAL MODULE: ./node_modules/smoothscroll-polyfill/dist/smoothscroll.js
 var smoothscroll = __webpack_require__(523);
 var smoothscroll_default = /*#__PURE__*/__webpack_require__.n(smoothscroll);
@@ -849,7 +849,7 @@ class Navigation {
     }
   }
 }
-/* harmony default export */ const modules_Navigation = (Navigation);
+/* harmony default export */ var modules_Navigation = (Navigation);
 ;// CONCATENATED MODULE: ./src/scripts/modules/ContactForm.js
 class ContactForm {
   constructor() {
@@ -891,7 +891,7 @@ class ContactForm {
     contactFormSuccess.classList.add('contact-form__success--active');
   }
 }
-/* harmony default export */ const modules_ContactForm = (ContactForm);
+/* harmony default export */ var modules_ContactForm = (ContactForm);
 ;// CONCATENATED MODULE: ./src/scripts/app.js
 
  // polyfill to load svgs from external URI (unsupported by IE)
@@ -904,7 +904,6 @@ const accordion = new modules_Accordion();
 const navigation = new modules_Navigation();
 const carousel = new modules_Carousel();
 const contactForm = new modules_ContactForm();
-})();
-
+}();
 /******/ })()
 ;
